@@ -36,7 +36,7 @@ namespace API
 
             app.UseAuthorization();
 
-            app.UseCors(b => b.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+            app.UseCors(b => b.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
             app.MapControllers();
 
             app.Run();
