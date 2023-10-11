@@ -23,7 +23,7 @@ namespace API
 
             // Configure the HTTP request pipeline.
             app.UseMiddleware<ExceptionMiddleware>();
-            
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -36,7 +36,7 @@ namespace API
 
             app.UseAuthentication();
             app.UseAuthorization();
-            
+
             app.MapControllers();
 
             app.Run();
