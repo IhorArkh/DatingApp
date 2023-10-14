@@ -25,7 +25,7 @@ public class AccountController : BaseApiController
     {
         if (await UserExists(registerDto.Username))
             return BadRequest("Username is taken");
-        
+
         using var hmac = new HMACSHA512();
 
         var user = new AppUser()
@@ -51,7 +51,7 @@ public class AccountController : BaseApiController
         var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == loginDto.Username);
         if (user == null)
             return Unauthorized("Invalid username");
-        
+
         using var hmac = new HMACSHA512(user.PasswordSalt);
 
         var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDto.Password));
