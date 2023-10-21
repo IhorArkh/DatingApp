@@ -292,4 +292,4 @@ terraform.tfstate
 terraform.tfstate.backup
 
 #appsettings
-.appsettings.json
+appsettings.json
