@@ -290,3 +290,6 @@ crossrootfs
 .terraform
 terraform.tfstate
 terraform.tfstate.backup
+
+#appsettings
+.appsettings.json
